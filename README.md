@@ -11,6 +11,7 @@ This is intended to be an experimental short-lived fork with the following chang
 - add chain startup script with example
 - add docker files and compose scripts including traefik proxy for auto-SSL
 - add ability to set public Protokit URL
+- add utility functions: `getNonce`, `getBlock`, `getTxnStatus`
 
 ## Deployment Quick start
 
