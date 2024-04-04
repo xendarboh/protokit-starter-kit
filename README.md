@@ -51,3 +51,22 @@ pnpm run test --filter=chain -- --watchAll
 ```
 
 Navigate to `localhost:3000` to see the example UI, or to `localhost:8080/graphql` to see the GQL interface of the locally running sequencer.
+
+### Deployment
+
+The example Docker Compose configuration includes a proxy with auto-SSL for the sequencer and UI.
+
+```sh
+cd apps/web
+# copy then edit .env to configure the URL of your sequencer
+cp env.example .env
+
+cd ../../docker
+# copy then edit .env to configure your domains
+cp env.example .env
+
+# start proxy, UI, and sequencer
+docker compose up -d
+```
+
+Optionally, the web app may be built (`pnpm run build`) and deployed separately from the sequencer with your preferred Next.js (or static site) deployment method.
